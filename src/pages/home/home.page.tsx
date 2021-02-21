@@ -1,5 +1,5 @@
 import React from  'react';
-import ProductGrid from '../../components/products-grid/products-grid.component';
+import ProductGrid from '../../components/products/products-grid/products-grid.component';
 import { useGetProducts } from '../../hooks/products/useGetProducts';
 
 const Home: React.FC = () => {

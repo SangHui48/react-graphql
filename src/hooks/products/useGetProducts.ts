@@ -1,7 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { Product } from "../../common/interfaces/product.interface";
 
-export const GET_PRODUCTS = gql`
+const GET_PRODUCTS = gql`
     query {
         products{
                 id

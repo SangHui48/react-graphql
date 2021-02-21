@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product } from '../../../common/interfaces/product.interface';
+import { Product } from '../../../../common/interfaces/product.interface';
 
 const ProductGridItem: React.FC<{ product: Product }> = ({product}: {product: Product}) => {
     return(

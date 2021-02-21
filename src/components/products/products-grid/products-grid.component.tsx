@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product } from '../../common/interfaces/product.interface';
+import { Product } from '../../../common/interfaces/product.interface';
 import ProductGridItem from './products-grid-item/products-grid-item.component';
 
 interface ProductGridProps{
