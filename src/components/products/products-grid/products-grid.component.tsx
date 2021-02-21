@@ -8,7 +8,7 @@ interface ProductGridProps {
     products: Product[]
 }
 
-const ProductGrid: React.FC<ProductGridProps> = ({ products }: ProductGridProps) => {
+const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
 
     const history = useHistory();
     const handleDetail = (target: Product) => {

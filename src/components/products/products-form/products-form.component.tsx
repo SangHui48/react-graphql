@@ -8,13 +8,13 @@ interface FormData {
 }
 
 const ProductsForm: React.FC = () => {
-    const  { register, handleSubmit } = useForm<FormData>();
+    const { register, handleSubmit } = useForm<FormData>();
     const createProduct = useCreateProduct();
 
-    const onSubmit = handleSubmit(({name, quantity}) => {
-        createProduct({variables: {name:name, quantity:quantity}});
+    const onSubmit = handleSubmit(({ name, quantity }) => {
+        createProduct({ variables: { name: name, quantity: quantity } });
     })
-    return(
+    return (
         <div className="products-form">
             <form onSubmit={onSubmit}>
                 <input type="text" name="name" ref={register} />

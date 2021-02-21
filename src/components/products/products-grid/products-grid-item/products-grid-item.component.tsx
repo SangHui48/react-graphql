@@ -2,7 +2,11 @@ import React from 'react';
 import { Product } from '../../../../common/interfaces/product.interface';
 import styled from 'styled-components';
 
-const ProductGridItem: React.FC<{ product: Product }> = ({ product }: { product: Product }) => {
+interface GridItemProps {
+    product: Product
+}
+
+const ProductGridItem: React.FC<GridItemProps> = ({ product }) => {
     return (
         <List>
             <p>{product.id}</p>

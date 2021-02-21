@@ -12,7 +12,7 @@ const GET_PRODUCTS = gql`
     }
 `
 export const useGetProducts = (): Product[] | undefined => {
-    const {data} = useQuery(GET_PRODUCTS);
+    const { data } = useQuery(GET_PRODUCTS);
     console.log(data);
     return data?.products;
 }
