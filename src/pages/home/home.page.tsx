@@ -1,4 +1,4 @@
-import React from  'react';
+import React from 'react';
 import ProductGrid from '../../components/products/products-grid/products-grid.component';
 import { useGetProducts } from '../../hooks/products/useGetProducts';
 
@@ -6,9 +6,9 @@ const Home: React.FC = () => {
 
     const products = useGetProducts();
 
-    return(
+    return (
         <div className="home">
-            <ProductGrid products={products || [] }/>
+            <ProductGrid products={products || []} />
         </div>
     );
 }

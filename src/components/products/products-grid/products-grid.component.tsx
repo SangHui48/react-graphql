@@ -11,7 +11,7 @@ interface ProductGridProps {
 const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
 
     const history = useHistory();
-    const handleDetail = (target: Product) => {
+    const handleDetail = (target: Product, e: any) => {
         const { id } = target;
         history.push(`/product/${id}`)
     }
@@ -20,7 +20,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
         <div className="product-grid">
             {products.map(product => (
                 <GridItem key={product.id}
-                    onClick={() => handleDetail(product)}
+                    onClick={(e: any) => handleDetail(product, e)}
                 >
                     <ProductGridItem
                         product={product}

@@ -2,8 +2,8 @@ import { gql, useMutation } from "@apollo/client";
 
 interface ProductInput {
     variables: {
-            name: string;
-            quantity: number;
+        name: string;
+        quantity: number;
     }
 }
 
@@ -13,7 +13,7 @@ const CREATE_PRODUCT = gql`
                 id
                 name
                 quantity
-                createAt
+                createdAt
             }
         }
 `
@@ -22,10 +22,10 @@ export const useCreateProduct = (): ((
     createProductInput: ProductInput,
 ) => any) => {
     const [createProduct] = useMutation(CREATE_PRODUCT, {
-        update(cache, {data: { createProduct }}){
+        update(cache, { data: { createProduct } }) {
             cache.modify({
-                fields:{
-                    products(existingProducts = []){
+                fields: {
+                    products(existingProducts = []) {
                         const newProductRef = cache.writeFragment({
                             data: createProduct,
                             fragment: gql`
