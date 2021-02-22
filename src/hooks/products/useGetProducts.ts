@@ -1,7 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { Product } from "../../common/interfaces/product.interface";
 
-const GET_PRODUCTS = gql`
+export const GET_PRODUCTS = gql`
     query {
         products{
                 id
@@ -12,7 +12,7 @@ const GET_PRODUCTS = gql`
     }
 `
 export const useGetProducts = (): Product[] | undefined => {
-    const {data} = useQuery(GET_PRODUCTS);
+    const { data } = useQuery(GET_PRODUCTS);
     console.log(data);
     return data?.products;
 }
