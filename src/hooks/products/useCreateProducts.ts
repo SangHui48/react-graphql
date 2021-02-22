@@ -41,6 +41,9 @@ export const useCreateProduct = (): ((
                     }
                 }
             })
+        },
+        onCompleted() {
+            console.log('completed')
         }
     });
     return createProduct
