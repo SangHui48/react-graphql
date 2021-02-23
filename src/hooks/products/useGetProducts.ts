@@ -13,6 +13,6 @@ export const GET_PRODUCTS = gql`
 `
 export const useGetProducts = (): Product[] | undefined => {
     const { data } = useQuery(GET_PRODUCTS);
-    console.log(data);
+    console.log('Get Product', data);
     return data?.products;
 }

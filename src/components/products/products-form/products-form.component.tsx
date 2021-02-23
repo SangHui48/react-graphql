@@ -10,8 +10,10 @@ interface FormData {
 
 const ProductsForm: React.FC = () => {
     const { register, handleSubmit } = useForm<FormData>();
-    const createProduct = useCreateProduct();
     const history = useHistory();
+    const createProduct = useCreateProduct();
+
+
     const onSubmit = handleSubmit(({ name, quantity }) => {
         createProduct({ variables: { name: name, quantity: quantity } });
         setTimeout(() => {
