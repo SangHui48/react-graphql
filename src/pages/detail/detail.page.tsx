@@ -50,12 +50,12 @@ const Detail: React.FC = () => {
         if (name === 'quantity') {
             setUpdateInput({
                 ...updateInput,
-                quantity: parseInt(value),
+                [name]: parseInt(value),
             });
         } else if (name === 'name') {
             setUpdateInput({
                 ...updateInput,
-                name: value
+                [name]: value
             });
         }
     }
@@ -78,9 +78,9 @@ const Detail: React.FC = () => {
                 }
             });
         }
-        setTimeout(() => {
-            setComplete('');
-        }, 1000)
+        // setTimeout(() => {
+        //     setComplete('');
+        // }, 3000)
     }
 
     return (
