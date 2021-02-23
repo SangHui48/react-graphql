@@ -99,7 +99,7 @@ const Detail: React.FC = () => {
                     )
             }
             {
-                complete && complete.length > 0 &&
+                complete?.length > 0 &&
                 <UpdateGuide>{complete}</UpdateGuide>
             }
             {
