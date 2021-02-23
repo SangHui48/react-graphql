@@ -69,7 +69,7 @@ const Detail: React.FC = () => {
     }
 
     const handleUpdateResult = () => {
-        if (updateInput.name !== '' && updateInput.quantity > 0) {
+        if (updateInput.name !== '' && updateInput.quantity !== result?.quantity) {
             UPDATE({
                 variables: {
                     name: updateInput.name,
