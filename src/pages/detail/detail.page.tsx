@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { useGetProductDetail } from '../../hooks/products/useGetProductDetail';
 import { useMutation } from '@apollo/client';
 import { UPDATE_PRODUCT } from '../../hooks/products/useUpdateProducts';
 import { GET_PRODUCTS } from '../../hooks/products/useGetProducts';
-import { useEffect } from 'react';
 
 interface Params {
     id: string;
